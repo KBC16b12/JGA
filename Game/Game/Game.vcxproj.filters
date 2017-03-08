@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Scene">
+      <UniqueIdentifier>{32c313bd-07db-494a-af8e-de395cbec093}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bar">
+      <UniqueIdentifier>{7debb954-78a1-4a04-a1c3-d09fe898d192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player">
+      <UniqueIdentifier>{c7e2c109-52da-4fa6-a704-04eb84987600}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\Title">
+      <UniqueIdentifier>{f3d7166b-c487-4540-8d6d-94f9f355ab9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\Game">
+      <UniqueIdentifier>{ca6a3bca-0e99-4177-b22a-6e3aa69baeae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\Menu">
+      <UniqueIdentifier>{6a936710-bf4a-40ed-b045-5660a1821bcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scene\Join">
+      <UniqueIdentifier>{cef8ccb2-25ee-4000-86ed-4db44d65b51d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Map">
+      <UniqueIdentifier>{d8196969-0a96-4267-b2a3-df4bcd3f1aa9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bar\Bar.cpp">
+      <Filter>Source Files\Bar</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\Player.cpp">
+      <Filter>Source Files\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\TitleScene.cpp">
+      <Filter>Source Files\Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\GameScene.cpp">
+      <Filter>Source Files\Scene\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\MenuScene.cpp">
+      <Filter>Source Files\Scene\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\JoinScene.cpp">
+      <Filter>Source Files\Scene\Join</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bar\Bar.h">
+      <Filter>Source Files\Bar</Filter>
+    </ClInclude>
+    <ClInclude Include="Player\Player.h">
+      <Filter>Source Files\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\TitleScene.h">
+      <Filter>Source Files\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\GameScene.h">
+      <Filter>Source Files\Scene\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\MenuScene.h">
+      <Filter>Source Files\Scene\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\JoinScene.h">
+      <Filter>Source Files\Scene\Join</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
