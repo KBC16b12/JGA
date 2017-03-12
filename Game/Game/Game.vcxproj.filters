@@ -33,6 +33,9 @@
     <Filter Include="Source Files\Map">
       <UniqueIdentifier>{d8196969-0a96-4267-b2a3-df4bcd3f1aa9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Scene\Ranking">
+      <UniqueIdentifier>{11e6896d-fff6-418d-a68f-0d41c89b1f3e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -59,11 +62,14 @@
     <ClCompile Include="Scene\JoinScene.cpp">
       <Filter>Source Files\Scene\Join</Filter>
     </ClCompile>
-    <ClCompile Include="Map.cpp">
+    <ClCompile Include="Map\Map.cpp">
       <Filter>Source Files\Map</Filter>
     </ClCompile>
-    <ClCompile Include="MapChip.cpp">
+    <ClCompile Include="Map\MapChip.cpp">
       <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\RankingScene.cpp">
+      <Filter>Source Files\Scene\Ranking</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -88,11 +94,14 @@
     <ClInclude Include="Scene\JoinScene.h">
       <Filter>Source Files\Scene\Join</Filter>
     </ClInclude>
-    <ClInclude Include="Map.h">
+    <ClInclude Include="Map\Map.h">
       <Filter>Source Files\Map</Filter>
     </ClInclude>
-    <ClInclude Include="MapChip.h">
+    <ClInclude Include="Map\MapChip.h">
       <Filter>Source Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\RankingScene.h">
+      <Filter>Source Files\Scene\Ranking</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

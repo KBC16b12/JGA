@@ -41,7 +41,7 @@ private:
 
 	CSoundSource* m_bgm = NULL;
 
-	CTexture*					m_texture;							//!<背景のテクスチャ。
-	CSprite						m_sprite;							//!<背景のスプライト。
+	CTexture*					m_TitleTex;							//!<背景のテクスチャ。
+	CSprite						m_Title;							//!<背景のスプライト。
 };
 

@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "GameScene.h"
 #include "TitleScene.h"
-#include "../Bar/Bar.h"
-#include "../Player/Player.h"
+#include "Bar/Bar.h"
+#include "Player/Player.h"
 
 GameScene* g_gameScene = NULL;
 

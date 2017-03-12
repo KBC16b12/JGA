@@ -3,7 +3,6 @@
 
 Bar::Bar()
 {
-
 	//ƒo[‚Ì‰Šú‰»
 	m_BarPath = "Assets/sprite/Black.png";
 	m_BarTex = TextureResources().LoadEx(m_BarPath);
