@@ -64,6 +64,10 @@ namespace tkEngine{
 		 * @brief	テクスチャをロード。
 		 */
 		bool Load( const char* fileName, bool isCubeMap = false);
+		/*!
+		* @brief	テクスチャをロード。
+		*/
+		bool LoadEx(const char* fileName, unsigned int color);
 		
 	private:
 		//テクスチャサイズを計算。

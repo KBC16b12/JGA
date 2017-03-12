@@ -37,5 +37,10 @@ private:
 	*@brief	画面遷移関数。
 	*/
 	void SceneChange();
+
+	CSoundSource* m_bgm = NULL;
+
+	CTexture*					m_texture;							//!<背景のテクスチャ。
+	CSprite						m_sprite;							//!<背景のスプライト。
 };
 

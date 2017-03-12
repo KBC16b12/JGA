@@ -44,12 +44,15 @@ private:
 	*/
 	void SceneChange();
 
+	CSoundSource*		m_bgm;							//!<BGMソース。
+
+	CTexture*					m_texture;							//!<背景のテクスチャ。
+	CSprite						m_sprite;							//!<背景のスプライト。
+
 	CCamera				m_camera;								//!<カメラ。
 	CLight				m_light;								//!<ライト。
 
 	Player*				m_player;
-
-	CSoundSource*		m_bgm;							//!<BGMソース。
 };
 
 extern GameScene* g_gameScene;

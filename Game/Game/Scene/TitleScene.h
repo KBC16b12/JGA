@@ -40,5 +40,8 @@ private:
 	void SceneChange();
 
 	CSoundSource* m_bgm = NULL;
+
+	CTexture*					m_texture;							//!<背景のテクスチャ。
+	CSprite						m_sprite;							//!<背景のスプライト。
 };
 

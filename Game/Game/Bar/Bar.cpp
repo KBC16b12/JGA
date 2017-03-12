@@ -3,24 +3,27 @@
 
 Bar::Bar()
 {
-	m_BarPath = "";
-	m_GaugePath = "";
-	m_BarBackPath = "";
 
 	//バーの初期化
-	m_Bar.Init(&m_BarTex);
+	m_BarPath = "Assets/sprite/Black.png";
+	m_BarTex = TextureResources().LoadEx(m_BarPath);
+	m_Bar.Init(m_BarTex);
 	m_Bar.SetPivot({ 0.0f, 0.5f });
 	SetBarMaxSize(CVector2::Zero);
 	SetBarPos(CVector2::Zero);
 
 	//背景の初期化
-	m_Gauge.Init(&m_GaugeTex);
+	m_GaugePath = "Assets/sprite/Black.png";
+	m_GaugeTex = TextureResources().LoadEx(m_GaugePath);
+	m_Gauge.Init(m_GaugeTex);
 	m_Gauge.SetPivot({ 0.0f, 0.5f });
 	SetGaugeMaxSize(CVector2::Zero);
 	SetGaugePos(CVector2::Zero);
 
 	//ダメージ演出のバーの初期化
-	m_BarBack.Init(&m_BarBackTex);
+	m_BarBackPath = "Assets/sprite/Black.png";
+	m_BarBackTex = TextureResources().LoadEx(m_BarBackPath);
+	m_BarBack.Init(m_BarBackTex);
 	m_BarBack.SetPivot({ 0.0f, 0.5f });
 
 	m_data = 0;

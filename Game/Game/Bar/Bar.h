@@ -54,39 +54,39 @@ public:
 	/*!
 	*@brief	バーのファイルパス設定。
 	*/
-	void SetBarPath(char* path)
+	void SetBarPath(char* path, unsigned int color = 0)
 	{
 		if (strcmp(m_BarPath, path) != 0)
 		{
 			m_BarPath = path;
-			m_BarTex.Load(m_BarPath);
-			m_Bar.SetTexture(&m_BarTex);
+			m_BarTex = TextureResources().LoadEx(m_BarPath, color);
+			m_Bar.SetTexture(m_BarTex);
 		}
 	}
 
 	/*!
 	*@brief	ダメージバーのファイルパス設定。
 	*/
-	void SetBarBackPath(char* path)
+	void SetBarBackPath(char* path, unsigned int color = 0)
 	{
 		if (strcmp(m_BarBackPath, path) != 0)
 		{
 			m_BarBackPath = path;
-			m_BarBackTex.Load(m_BarBackPath);
-			m_BarBack.SetTexture(&m_BarBackTex);
+			m_BarBackTex = TextureResources().LoadEx(m_BarBackPath, color);
+			m_BarBack.SetTexture(m_BarBackTex);
 		}
 	}
 
 	/*!
 	*@brief	背景のファイルパス設定。
 	*/
-	void SetGaugePath(char* path)
+	void SetGaugePath(char* path, unsigned int color = 0)
 	{
 		if (strcmp(m_GaugePath, path) != 0)
 		{
 			m_GaugePath = path;
-			m_GaugeTex.Load(m_GaugePath);
-			m_Gauge.SetTexture(&m_GaugeTex);
+			m_GaugeTex = TextureResources().LoadEx(m_GaugePath, color);
+			m_Gauge.SetTexture(m_GaugeTex);
 		}
 	}
 
@@ -168,18 +168,18 @@ private:
 	void Bar_Wait();
 
 	CSprite				m_Bar;			//バー。
-	CTexture			m_BarTex;		//バーのテクスチャ。
+	CTexture*			m_BarTex;		//バーのテクスチャ。
 	char*				m_BarPath;		//バーのファイルパス。
 	CVector2			m_BarPos;
 	
 	CVector2			m_BarMaxSize;
 		
 	CSprite				m_Gauge;		//ゲージ。
-	CTexture			m_GaugeTex;		//ゲージのテクスチャ。
+	CTexture*			m_GaugeTex;		//ゲージのテクスチャ。
 	char*				m_GaugePath;	//ゲージのファイルパス。
 
 	CSprite				m_BarBack;		//バーの背景。
-	CTexture			m_BarBackTex;	//バーの背景のテクスチャ
+	CTexture*			m_BarBackTex;	//バーの背景のテクスチャ
 	char*				m_BarBackPath;	//バーの背景のファイルパス
 
 	int					m_data;			//現在の値
