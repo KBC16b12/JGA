@@ -23,6 +23,9 @@ using namespace tkEngine;
 
 #include "tkEngine/Sound/tkSoundSource.h"
 
+#include "stuNamespace.h"
+using namespace Status;
+
 extern CRandom g_random;
 
 #endif // _STDAFX_H_
