@@ -38,6 +38,14 @@ public:
 	*/
 	void Render(CRenderContext& renderContext);
 
+	/*!
+	*@brief	遅延描画関数。
+	@details
+	* ポストエフェクトの後で実行されます。HUDなどポストエフェクトの影響を受けたくない描画物はここでレンダリングしてください。
+	*@param[in]		renderContext		レンダリングコンテキスト。
+	*/
+	void PostRender(CRenderContext& renderContext) override;
+
 private:
 	/*!
 	*@brief	画面遷移関数。
@@ -46,8 +54,8 @@ private:
 
 	CSoundSource*				m_bgm;							//!<BGMソース。
 
-	CTexture*					m_texture;							//!<背景のテクスチャ。
-	CSprite						m_sprite;							//!<背景のスプライト。
+	CTexture*					m_SampleTex;						//!<サンプルのテクスチャ。
+	CSprite						m_Sample;							//!<サンプルのスプライト。
 
 	CCamera						m_camera;								//!<カメラ。
 	CLight						m_light;								//!<ライト。

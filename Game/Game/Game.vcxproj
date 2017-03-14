@@ -159,6 +159,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>tkEngine.lib;%(AdditionalDependencies);LinearMath.lib;BulletSoftBody.lib;BulletDynamics.lib;BulletCollision.lib;</AdditionalDependencies>
+      <AdditionalOptions>ws2_32.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -175,6 +176,7 @@
     <ClCompile Include="Scene\ResultScene\ResultScene.cpp" />
     <ClCompile Include="Scene\SoloScene\SoloScene.cpp" />
     <ClCompile Include="Scene\TitleScene\TitleScene.cpp" />
+    <ClCompile Include="Scene\WaitScene\WaitScene.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -195,6 +197,7 @@
     <ClInclude Include="Scene\ResultScene\ResultScene.h" />
     <ClInclude Include="Scene\SoloScene\SoloScene.h" />
     <ClInclude Include="Scene\TitleScene\TitleScene.h" />
+    <ClInclude Include="Scene\WaitScene\WaitScene.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="stuNamespace.h" />
   </ItemGroup>

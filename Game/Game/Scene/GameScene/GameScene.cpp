@@ -1,14 +1,18 @@
 #include "stdafx.h"
-#include "GameScene.h"
-#include "../TitleScene/TitleScene.h"
+#include "../Fade/Fade.h"
+#include "../GameScene/GameScene.h"
+#include "../MenuScene/MenuScene.h"
+#include "../ResultScene/ResultScene.h"
 #include "Bar/Bar.h"
 #include "Player/Player.h"
-#include "../Fade/Fade.h"
 
 GameScene* g_gameScene = NULL;
 
 GameScene::GameScene()
 {
+	m_SampleTex = TextureResources().LoadEx("Assets/sprite/Game.png");
+	m_Sample.Init(m_SampleTex);
+	m_Sample.SetSize({ (float)Engine().GetScreenWidth(),(float)Engine().GetScreenHeight() });
 }
 
 GameScene::~GameScene()
@@ -50,6 +54,14 @@ void GameScene::Render(CRenderContext& renderContext)
 }
 
 /*!
+*@brief	•`‰æŠÖ”B
+*/
+void GameScene::PostRender(CRenderContext& renderContext)
+{
+	m_Sample.Draw(renderContext);
+}
+
+/*!
 *@brief	‰æ–Ê‘JˆÚŠÖ”B
 */
 void GameScene::SceneChange()
@@ -64,24 +76,35 @@ void GameScene::SceneChange()
 		}
 		break;
 	case enRun:
+		if (Pad(0).IsTrigger(enButtonStart))
+		{
+			m_scenedata = enMenu;
+
+			m_runstat = enFadeOut;
+
+			g_Fade->StartFadeOut();
+			return;
+		}
+		if (Pad(0).IsTrigger(enButtonA))
+		{
+			m_scenedata = enResult;
+
+			m_runstat = enFadeOut;
+
+			g_Fade->StartFadeOut();
+			return;
+		}
 		break;
 	case enFadeOut:
 		if (!g_Fade->IsExecute())
 		{
 			switch (m_scenedata)
 			{
-			case enGame:
-				break;
-			case enJoin:
-				break;
 			case enMenu:
+				NewGO<MenuScene>(0);
 				break;
-			case enRanking:
-				break;
-			case enTitle:
-				break;
-			case enSolo:
-				break;
+			case enResult:
+				NewGO<ResultScene>(0);
 			default:
 				break;
 			}

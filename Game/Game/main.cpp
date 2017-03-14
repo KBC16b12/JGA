@@ -57,10 +57,10 @@ int WINAPI wWinMain(
 	HINSTANCE hPrevInstance,
 	LPWSTR lpCmdLine,
 	int nCmdShow
-	)
+)
 {
 	//tkEngine‚Ì‰Šú‰»B
-	InitTkEngine( hInst );
+	InitTkEngine(hInst);
 
 	g_Fade = NewGO<Fade>(1);
 

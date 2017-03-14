@@ -1,11 +1,13 @@
 #include "stdafx.h"
-#include "RankingScene.h"
-#include "../SoloScene/SoloScene.h"
-#include "../TitleScene/TitleScene.h"
 #include "../Fade/Fade.h"
+#include "../Ranking/RankingScene.h"
+#include "../SoloScene/SoloScene.h"
 
 RankingScene::RankingScene()
 {
+	m_SampleTex = TextureResources().LoadEx("Assets/sprite/Ranking.png");
+	m_Sample.Init(m_SampleTex);
+	m_Sample.SetSize({ (float)Engine().GetScreenWidth(),(float)Engine().GetScreenHeight() });
 }
 
 RankingScene::~RankingScene()
@@ -24,6 +26,7 @@ void RankingScene::Update()
 
 void RankingScene::PostRender(CRenderContext& renderContext)
 {
+	m_Sample.Draw(renderContext);
 }
 
 void RankingScene::SceneChange()
@@ -38,10 +41,27 @@ void RankingScene::SceneChange()
 		}
 		break;
 	case enRun:
+		if (Pad(0).IsTrigger(enButtonA))
+		{
+			m_scenedata = enSolo;
+
+			m_runstat = enFadeOut;
+
+			g_Fade->StartFadeOut();
+			return;
+		}
 		break;
 	case enFadeOut:
 		if (!g_Fade->IsExecute())
 		{
+			switch (m_scenedata)
+			{
+			case enSolo:
+				NewGO<SoloScene>(0);
+				break;
+			default:
+				break;
+			}
 			//©•ª‚ğíœB
 			DeleteGO(this);
 			return;
