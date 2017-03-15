@@ -45,6 +45,9 @@
     <Filter Include="Source Files\Scene\Result">
       <UniqueIdentifier>{eabb8e04-7c14-4084-9c3c-838adbfa5367}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Scene\Wait">
+      <UniqueIdentifier>{fe5e7bad-c962-4baf-b854-d06d103e9aa6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -85,6 +88,9 @@
     </ClCompile>
     <ClCompile Include="Scene\TitleScene\TitleScene.cpp">
       <Filter>Source Files\Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\WaitScene\WaitScene.cpp">
+      <Filter>Source Files\Scene\Wait</Filter>
     </ClCompile>
     <ClCompile Include="Scene\SoloScene\SoloScene.cpp">
       <Filter>Source Files\Scene\Solo</Filter>
@@ -132,6 +138,9 @@
     </ClInclude>
     <ClInclude Include="Scene\SoloScene\SoloScene.h">
       <Filter>Source Files\Scene\Solo</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\WaitScene\WaitScene.h">
+      <Filter>Source Files\Scene\Wait</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -43,8 +43,8 @@ private:
 
 	CSoundSource* m_bgm = NULL;
 
-	CTexture*					m_SoloTex;						//!<背景のテクスチャ。
-	CSprite						m_Solo;							//!<背景のスプライト。
+	CTexture*					m_SampleTex;						//!<サンプルのテクスチャ。
+	CSprite						m_Sample;							//!<サンプルのスプライト。
 
 	RunStat						m_runstat = enFadeIn;
 

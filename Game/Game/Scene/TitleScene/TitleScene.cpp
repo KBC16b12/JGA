@@ -1,14 +1,11 @@
 #include "stdafx.h"
-#include "TitleScene.h"
-#include "../GameScene/GameScene.h"
-#include "../JoinScene/JoinScene.h"
-#include "../MenuScene/MenuScene.h"
-#include "../SoloScene/SoloScene.h"
 #include "../Fade/Fade.h"
+#include "../JoinScene/JoinScene.h"
+#include "../SoloScene/SoloScene.h"
+#include "../TitleScene/TitleScene.h"
 
 TitleScene::TitleScene()
 {
-	//ÉoÅ[ÇÃèâä˙âª
 	m_TitleTex = TextureResources().LoadEx("Assets/sprite/Title.png");
 	m_Title.Init(m_TitleTex);
 	m_Title.SetSize({ (float)Engine().GetScreenWidth(),(float)Engine().GetScreenHeight() });
@@ -24,6 +21,7 @@ bool TitleScene::Start()
 	m_bgm = NewGO<CSoundSource>(0);
 	m_bgm->Init("Assets/sound/TitleBGM.wav");
 	m_bgm->Play(true);
+
 	return true;
 }
 void TitleScene::Update()
@@ -56,9 +54,18 @@ void TitleScene::SceneChange()
 			m_scenedata = enSolo;
 
 			m_runstat = enFadeOut;
+
+			g_Fade->StartFadeOut();
+			return;
 		}
 		if (Pad(0).IsTrigger(enButtonB))
 		{
+			m_scenedata = enJoin;
+
+			m_runstat = enFadeOut;
+
+			g_Fade->StartFadeOut();
+			return;
 		}
 		break;
 	case enFadeOut:
@@ -66,18 +73,11 @@ void TitleScene::SceneChange()
 		{
 			switch (m_scenedata)
 			{
-			case enGame:
-
-				break;
 			case enJoin:
-				break;
-			case enMenu:
-				break;
-			case enRanking:
-				break;
-			case enTitle:
+				NewGO<JoinScene>(0);
 				break;
 			case enSolo:
+				NewGO<SoloScene>(0);
 				break;
 			default:
 				break;

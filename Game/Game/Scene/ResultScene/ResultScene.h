@@ -1,5 +1,5 @@
 #pragma once
-class ResultScene
+class ResultScene : public IGameObject
 {
 public:
 	/*!
@@ -36,6 +36,9 @@ private:
 	*@brief	画面遷移関数。
 	*/
 	void SceneChange();
+
+	CTexture*					m_SampleTex;						//!<サンプルのテクスチャ。
+	CSprite						m_Sample;							//!<サンプルのスプライト。
 
 	RunStat						m_runstat = enFadeIn;
 

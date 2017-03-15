@@ -14,7 +14,9 @@ namespace Status
 		enGame,
 		enJoin,
 		enMenu,
+		enResult,
 		enRanking,
+		enWait,
 		enTitle,
 		enSolo
 	};

@@ -37,6 +37,9 @@ private:
 	*/
 	void SceneChange();
 
+	CTexture*					m_SampleTex;						//!<サンプルのテクスチャ。
+	CSprite						m_Sample;							//!<サンプルのスプライト。
+
 	RunStat						m_runstat = enFadeIn;
 
 	SceneData					m_scenedata;
