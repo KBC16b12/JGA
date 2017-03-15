@@ -1,0 +1,14 @@
+/Game/Game.VC.db
+
+/tkEngine/bulletPhysics/src/LinearMath/x64/Release
+/tkEngine/bulletPhysics/src/LinearMath/x64/Debug
+
+/Game/Game/x64
+/tkEngine/bulletPhysics/src/BulletCollision/x64
+/tkEngine/x64
+/Game/Game/x64
+/tkEngine/bulletPhysics/src/LinearMath/x64
+/tkEngine/bulletPhysics/src/BulletSoftBody/x64
+/tkEngine/x64
+/tkEngine/bulletPhysics/src/BulletDynamics/x64
+/tkEngine/bulletPhysics/src/BulletCollision/x64
