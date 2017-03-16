@@ -57,6 +57,9 @@ private:
 	CTexture*					m_SampleTex;						//!<サンプルのテクスチャ。
 	CSprite						m_Sample;							//!<サンプルのスプライト。
 
+	CTexture*					m_texture;
+	CSprite						m_sprite;
+
 	CCamera						m_camera;								//!<カメラ。
 	CLight						m_light;								//!<ライト。
 
