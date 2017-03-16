@@ -12,3 +12,5 @@
 /tkEngine/x64
 /tkEngine/bulletPhysics/src/BulletDynamics/x64
 /tkEngine/bulletPhysics/src/BulletCollision/x64
+/tkEngine/bulletPhysics/src/BulletSoftBody/x64
+/tkEngine/bulletPhysics/src/LinearMath/x64
