@@ -166,12 +166,6 @@
     <ClCompile Include="Bar\Bar.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player\Player.cpp" />
-<<<<<<< HEAD
-    <ClCompile Include="Scene\GameScene.cpp" />
-    <ClCompile Include="Scene\JoinScene.cpp" />
-    <ClCompile Include="Scene\MenuScene.cpp" />
-    <ClCompile Include="Scene\TitleScene.cpp" />
-=======
     <ClCompile Include="Scene\Fade\Fade.cpp" />
     <ClCompile Include="Scene\GameScene\GameScene.cpp" />
     <ClCompile Include="Scene\JoinScene\JoinScene.cpp" />
@@ -181,7 +175,6 @@
     <ClCompile Include="Scene\SoloScene\SoloScene.cpp" />
     <ClCompile Include="Scene\TitleScene\TitleScene.cpp" />
     <ClCompile Include="Scene\WaitScene\WaitScene.cpp" />
->>>>>>> c886d483d337a27c36342757a3b5ab61917d6174
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -192,12 +185,7 @@
   <ItemGroup>
     <ClInclude Include="Bar\Bar.h" />
     <ClInclude Include="Player\Player.h" />
-<<<<<<< HEAD
-    <ClInclude Include="Scene\GameScene.h" />
-    <ClInclude Include="Scene\JoinScene.h" />
-    <ClInclude Include="Scene\MenuScene.h" />
-    <ClInclude Include="Scene\TitleScene.h" />
-=======
+
     <ClInclude Include="Scene\Fade\Fade.h" />
     <ClInclude Include="Scene\GameScene\GameScene.h" />
     <ClInclude Include="Scene\JoinScene\JoinScene.h" />
@@ -207,7 +195,6 @@
     <ClInclude Include="Scene\SoloScene\SoloScene.h" />
     <ClInclude Include="Scene\TitleScene\TitleScene.h" />
     <ClInclude Include="Scene\WaitScene\WaitScene.h" />
->>>>>>> c886d483d337a27c36342757a3b5ab61917d6174
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="stuNamespace.h" />
   </ItemGroup>
