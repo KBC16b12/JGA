@@ -15,6 +15,7 @@ GameScene::GameScene()
 	m_Sample.SetSize({ (float)Engine().GetScreenWidth(),(float)Engine().GetScreenHeight() });
 	m_texture = TextureResources().LoadEx("Assets/sprite/NewNumber/0.png");
 	m_sprite.Init(m_texture);
+	m_sprite.SetPosition({0.0f, 0.0f});
 
 }
 
