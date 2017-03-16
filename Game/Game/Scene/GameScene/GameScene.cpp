@@ -13,6 +13,9 @@ GameScene::GameScene()
 	m_SampleTex = TextureResources().LoadEx("Assets/sprite/Game.png");
 	m_Sample.Init(m_SampleTex);
 	m_Sample.SetSize({ (float)Engine().GetScreenWidth(),(float)Engine().GetScreenHeight() });
+	m_texture = TextureResources().LoadEx("Assets/sprite/NewNumber/0.png");
+	m_sprite.Init(m_texture);
+
 }
 
 GameScene::~GameScene()
@@ -59,6 +62,7 @@ void GameScene::Render(CRenderContext& renderContext)
 void GameScene::PostRender(CRenderContext& renderContext)
 {
 	m_Sample.Draw(renderContext);
+	m_sprite.Draw(renderContext);
 }
 
 /*!

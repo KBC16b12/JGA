@@ -77,8 +77,6 @@
     <ClCompile Include="Scene\JoinScene\JoinScene.cpp">
       <Filter>Source Files\Scene\Join</Filter>
     </ClCompile>
-<<<<<<< HEAD
-=======
     <ClCompile Include="Scene\MenuScene\MenuScene.cpp">
       <Filter>Source Files\Scene\Menu</Filter>
     </ClCompile>
@@ -97,7 +95,6 @@
     <ClCompile Include="Scene\SoloScene\SoloScene.cpp">
       <Filter>Source Files\Scene\Solo</Filter>
     </ClCompile>
->>>>>>> c886d483d337a27c36342757a3b5ab61917d6174
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -127,8 +124,6 @@
     <ClInclude Include="Scene\JoinScene\JoinScene.h">
       <Filter>Source Files\Scene\Join</Filter>
     </ClInclude>
-<<<<<<< HEAD
-=======
     <ClInclude Include="Scene\MenuScene\MenuScene.h">
       <Filter>Source Files\Scene\Menu</Filter>
     </ClInclude>
@@ -147,6 +142,5 @@
     <ClInclude Include="Scene\WaitScene\WaitScene.h">
       <Filter>Source Files\Scene\Wait</Filter>
     </ClInclude>
->>>>>>> c886d483d337a27c36342757a3b5ab61917d6174
   </ItemGroup>
 </Project>
