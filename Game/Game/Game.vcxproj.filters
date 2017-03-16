@@ -62,15 +62,6 @@
     <ClCompile Include="Scene\JoinScene.cpp">
       <Filter>Source Files\Scene\Join</Filter>
     </ClCompile>
-    <ClCompile Include="Map\Map.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Map\MapChip.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene\RankingScene.cpp">
-      <Filter>Source Files\Scene\Ranking</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -93,15 +84,6 @@
     </ClInclude>
     <ClInclude Include="Scene\JoinScene.h">
       <Filter>Source Files\Scene\Join</Filter>
-    </ClInclude>
-    <ClInclude Include="Map\Map.h">
-      <Filter>Source Files\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="Map\MapChip.h">
-      <Filter>Source Files\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene\RankingScene.h">
-      <Filter>Source Files\Scene\Ranking</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

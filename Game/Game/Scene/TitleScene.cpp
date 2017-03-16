@@ -2,7 +2,7 @@
 #include "TitleScene.h"
 #include "GameScene.h"
 #include "JoinScene.h"
-#include "RankingScene.h"
+//#include "Scene/RankingScene.h"
 
 TitleScene::TitleScene()
 {
@@ -53,7 +53,7 @@ void TitleScene::SceneChange()
 	}
 	if (Pad(0).IsPress(enButtonX)) {
 		//ƒ‰ƒ“ƒLƒ“ƒO‰æ–Ê‚É‘JˆÚ‚·‚éB
-		NewGO<RankingScene>(0);
+		//NewGO<RankingScene>(0);
 		DeleteGO(this);
 		return;
 	}

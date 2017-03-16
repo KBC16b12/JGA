@@ -30,6 +30,11 @@ bool GameScene::Start()
 	m_camera.SetFar(1000.0f);
 	m_camera.Update();
 
+	//タイマー
+	m_texture = TextureResources().LoadEx("Assets/sprite/NewNumber/9.png", 0);
+	m_sprite.Init(m_texture);
+	m_sprite.SetPosition({ 5.0f,0.0f,0.0f });
+	
 	//ライトを初期化。
 	m_light.SetAmbinetLight(CVector3::One);
 
@@ -46,6 +51,7 @@ void GameScene::Update()
 */
 void GameScene::Render(CRenderContext& renderContext)
 {
+	m_sprite.Draw(renderContext);
 }
 
 /*!
