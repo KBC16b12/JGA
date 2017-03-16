@@ -15,7 +15,7 @@ Player::Player()
 	m_bar->SetGaugePath("Assets/sprite/Black.png");
 	m_bar->SetBarBackPath("Assets/sprite/Black.png");
 	m_bar->SetData(m_hp, m_maxhp);
-	m_bar->SetBerQuarter(Bar::enBarQuarter::enQuaLeft);
+	m_bar->SetBerQuarter(Bar::enBarQuarter::enQuaUp);
 }
 
 Player::~Player()

@@ -62,12 +62,6 @@
     <ClCompile Include="Player\Player.cpp">
       <Filter>Source Files\Player</Filter>
     </ClCompile>
-    <ClCompile Include="Map\Map.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Map\MapChip.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
     <ClCompile Include="Scene\Fade\Fade.cpp">
       <Filter>Source Files\Scene\Fade</Filter>
     </ClCompile>
@@ -95,6 +89,12 @@
     <ClCompile Include="Scene\SoloScene\SoloScene.cpp">
       <Filter>Source Files\Scene\Solo</Filter>
     </ClCompile>
+    <ClCompile Include="Map\Map.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Map\MapChip.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -105,12 +105,6 @@
     </ClInclude>
     <ClInclude Include="Player\Player.h">
       <Filter>Source Files\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Map\Map.h">
-      <Filter>Source Files\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="Map\MapChip.h">
-      <Filter>Source Files\Map</Filter>
     </ClInclude>
     <ClInclude Include="stuNamespace.h">
       <Filter>Source Files</Filter>
@@ -141,6 +135,12 @@
     </ClInclude>
     <ClInclude Include="Scene\WaitScene\WaitScene.h">
       <Filter>Source Files\Scene\Wait</Filter>
+    </ClInclude>
+    <ClInclude Include="Map\Map.h">
+      <Filter>Source Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Map\MapChip.h">
+      <Filter>Source Files\Map</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
