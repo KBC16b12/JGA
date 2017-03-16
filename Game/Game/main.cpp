@@ -1,5 +1,6 @@
 #include "stdafx.h"
-#include "Scene/TitleScene.h"
+#include "Scene/TitleScene/TitleScene.h"
+#include "Scene/Fade/Fade.h"
 
 CRandom g_random;
 /*!
@@ -56,10 +57,12 @@ int WINAPI wWinMain(
 	HINSTANCE hPrevInstance,
 	LPWSTR lpCmdLine,
 	int nCmdShow
-	)
+)
 {
 	//tkEngineの初期化。
-	InitTkEngine( hInst );
+	InitTkEngine(hInst);
+
+	g_Fade = NewGO<Fade>(1);
 
 	//タイトルシーンの作成。
 	NewGO<TitleScene>(0);
