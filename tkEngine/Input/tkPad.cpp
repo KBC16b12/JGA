@@ -44,10 +44,10 @@ namespace tkEngine{
 			DWORD keyCoord;			//!<キーボードのキーコード。
 		};
 		const VirtualPadToKeyboard vPadToKeyboardTable[enButtonNum] = {
-			{ enButtonUp		, 'I' },
-			{ enButtonDown		, 'K' },
-			{ enButtonLeft		, 'J' },
-			{ enButtonRight		, 'L' },
+			{ enButtonUp		, VK_UP },
+			{ enButtonDown		, VK_DOWN },
+			{ enButtonLeft		, VK_LEFT },
+			{ enButtonRight		, VK_RIGHT },
 			{ enButtonA			, VK_NUMPAD2 },
 			{ enButtonB			, VK_NUMPAD6 },
 			{ enButtonY			, VK_NUMPAD8 },
