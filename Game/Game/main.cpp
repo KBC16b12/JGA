@@ -1,6 +1,9 @@
 #include "stdafx.h"
 #include "Scene/TitleScene/TitleScene.h"
 #include "Scene/Fade/Fade.h"
+#include "Camera/GameCamera.h"
+
+CLight	g_defaultLight;	//デフォルトライト。
 
 CRandom g_random;
 /*!
@@ -45,6 +48,18 @@ void InitTkEngine( HINSTANCE hInst )
 	//乱数初期化。
 	g_random.Init((unsigned long)time(NULL));
 
+	//デフォルトライトの初期化。
+	g_defaultLight.SetDiffuseLightDirection(0, { 0.707f, 0.0f, -0.707f });
+	g_defaultLight.SetDiffuseLightDirection(1, { -0.707f, 0.0f, -0.707f });
+	g_defaultLight.SetDiffuseLightDirection(2, { 0.0f, 0.707f, -0.707f });
+	g_defaultLight.SetDiffuseLightDirection(3, { 0.0f, -0.707f, -0.707f });
+
+	g_defaultLight.SetDiffuseLightColor(0, { 0.2f, 0.2f, 0.2f, 1.0f });
+	g_defaultLight.SetDiffuseLightColor(1, { 0.2f, 0.2f, 0.2f, 1.0f });
+	g_defaultLight.SetDiffuseLightColor(2, { 0.3f, 0.3f, 0.3f, 1.0f });
+	g_defaultLight.SetDiffuseLightColor(3, { 0.2f, 0.2f, 0.2f, 1.0f });
+	g_defaultLight.SetAmbinetLight({ 0.3f, 0.3f, 0.3f });
+
 	Engine().Init(initParam);	//初期化。
 	
 	ShadowMap().SetNear(2.0f);
@@ -63,6 +78,8 @@ int WINAPI wWinMain(
 	InitTkEngine(hInst);
 
 	g_Fade = NewGO<Fade>(1);
+
+	g_gameCamera = NewGO<GameCamera>(0);
 
 	//タイトルシーンの作成。
 	NewGO<TitleScene>(0);

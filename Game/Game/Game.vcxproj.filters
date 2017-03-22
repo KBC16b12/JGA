@@ -48,6 +48,9 @@
     <Filter Include="Source Files\Scene\Wait">
       <UniqueIdentifier>{fe5e7bad-c962-4baf-b854-d06d103e9aa6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameCamera">
+      <UniqueIdentifier>{3f196125-2a0d-46e1-84b6-bc737ee1d69a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -62,12 +65,6 @@
     <ClCompile Include="Player\Player.cpp">
       <Filter>Source Files\Player</Filter>
     </ClCompile>
-    <ClCompile Include="Map\Map.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Map\MapChip.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
     <ClCompile Include="Scene\Fade\Fade.cpp">
       <Filter>Source Files\Scene\Fade</Filter>
     </ClCompile>
@@ -77,8 +74,6 @@
     <ClCompile Include="Scene\JoinScene\JoinScene.cpp">
       <Filter>Source Files\Scene\Join</Filter>
     </ClCompile>
-<<<<<<< HEAD
-=======
     <ClCompile Include="Scene\MenuScene\MenuScene.cpp">
       <Filter>Source Files\Scene\Menu</Filter>
     </ClCompile>
@@ -97,7 +92,15 @@
     <ClCompile Include="Scene\SoloScene\SoloScene.cpp">
       <Filter>Source Files\Scene\Solo</Filter>
     </ClCompile>
->>>>>>> c886d483d337a27c36342757a3b5ab61917d6174
+    <ClCompile Include="Map\Map.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Map\MapChip.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\GameCamera.cpp">
+      <Filter>Source Files\GameCamera</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -108,12 +111,6 @@
     </ClInclude>
     <ClInclude Include="Player\Player.h">
       <Filter>Source Files\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Map\Map.h">
-      <Filter>Source Files\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="Map\MapChip.h">
-      <Filter>Source Files\Map</Filter>
     </ClInclude>
     <ClInclude Include="stuNamespace.h">
       <Filter>Source Files</Filter>
@@ -127,8 +124,6 @@
     <ClInclude Include="Scene\JoinScene\JoinScene.h">
       <Filter>Source Files\Scene\Join</Filter>
     </ClInclude>
-<<<<<<< HEAD
-=======
     <ClInclude Include="Scene\MenuScene\MenuScene.h">
       <Filter>Source Files\Scene\Menu</Filter>
     </ClInclude>
@@ -147,6 +142,14 @@
     <ClInclude Include="Scene\WaitScene\WaitScene.h">
       <Filter>Source Files\Scene\Wait</Filter>
     </ClInclude>
->>>>>>> c886d483d337a27c36342757a3b5ab61917d6174
+    <ClInclude Include="Map\Map.h">
+      <Filter>Source Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Map\MapChip.h">
+      <Filter>Source Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\GameCamera.h">
+      <Filter>Source Files\GameCamera</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
