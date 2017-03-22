@@ -67,7 +67,6 @@ void Player::UpdateHPBar()
 		m_bar->SetBarPath("Assets/sprite/Red.png");
 	}
 	m_bar->SetData(m_hp, m_maxhp);
-<<<<<<< HEAD
 
 	Move();
 
@@ -148,6 +147,4 @@ void Player::Move()
 void Player::Render(CRenderContext& renderContext)
 {
 	skinModel.Draw(renderContext,m_camera->GetViewMatrix(),m_camera->GetProjectionMatrix());
-=======
->>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
 }
