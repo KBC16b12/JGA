@@ -1,4 +1,7 @@
 #pragma once
+
+class MapChip;
+
 class Map : public IGameObject
 {
 public:
@@ -6,10 +9,18 @@ public:
 	*@brief	コンストラクタ。
 	*/
 	Map();
+	
 	/*!
 	*@brief	デストラクタ。
 	*/
 	~Map();
+	
+	/*!
+	*@brief 初期化関数
+	*@details 
+	*/
+	void Init(std::vector<SMapInfo> map_dat);
+
 	/*!
 	*@brief	開始関数。
 	*@details
@@ -19,10 +30,12 @@ public:
 	*@return	trueが帰ってきたら初期化完了。
 	*/
 	bool Start() override;
+	
 	/*!
 	*@brief	更新関数。
 	*/
 	void Update() override;
+	
 	/*!
 	*@brief	遅延描画関数。
 	@details
@@ -32,10 +45,7 @@ public:
 	void PostRender(CRenderContext& renderContext) override;
 
 private:
-	/*!
-	*@brief	画面遷移関数。
-	*/
-	void SceneChange();
 
+	std::vector<MapChip*>		m_mapchip;
 };
 

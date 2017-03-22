@@ -44,7 +44,6 @@ void MenuScene::SceneChange()
 	case enFadeIn:
 		if (!g_Fade->IsExecute())
 		{
-			g_Fade->StartFadeIn();
 			m_runstat = enRun;
 		}
 		break;
@@ -63,8 +62,6 @@ void MenuScene::SceneChange()
 			m_scenedata = enGame;
 
 			m_runstat = enFadeOut;
-
-			g_Fade->StartFadeOut();
 			return;
 		}
 		break;
@@ -74,10 +71,14 @@ void MenuScene::SceneChange()
 			switch (m_scenedata)
 			{
 			case enGame:
-				g_gameScene = NewGO<GameScene>(0);
+				g_gameScene->SetActiveFlag(true);
 				break;
 			case enTitle:
 				NewGO<TitleScene>(0);
+				if (g_gameScene != nullptr)
+				{
+					DeleteGO(g_gameScene);
+				}
 				break;
 			default:
 				break;

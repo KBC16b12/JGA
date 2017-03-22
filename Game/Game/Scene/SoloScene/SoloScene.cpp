@@ -5,6 +5,13 @@
 #include "../SoloScene/SoloScene.h"
 #include "../TitleScene/TitleScene.h"
 
+namespace
+{
+	std::vector<SMapInfo> n_solo_map_dat =
+	{
+#include "../../Map/MapData/Sample.h"
+	};
+}
 
 SoloScene::SoloScene()
 {
@@ -86,6 +93,7 @@ void SoloScene::SceneChange()
 			{
 			case enGame:
 				g_gameScene = NewGO<GameScene>(0);
+				g_gameScene->Init(n_solo_map_dat);
 				break;
 			case enRanking:
 				NewGO<RankingScene>(0);

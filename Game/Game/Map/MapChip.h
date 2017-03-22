@@ -1,14 +1,25 @@
 #pragma once
+
+struct Status::SMapInfo;
+
 class MapChip : public IGameObject
 {
-public:	/*!
+public:	
+	/*!
 	*@brief	コンストラクタ。
 	*/
 	MapChip();
+
 	/*!
 	*@brief	デストラクタ。
 	*/
 	~MapChip();
+
+	/*!
+	*@brief 初期化関数
+	*/
+	void Init(SMapInfo map_dat);
+
 	/*!
 	*@brief	開始関数。
 	*@details
@@ -18,22 +29,28 @@ public:	/*!
 	*@return	trueが帰ってきたら初期化完了。
 	*/
 	bool Start() override;
+
 	/*!
 	*@brief	更新関数。
 	*/
 	void Update() override;
+
 	/*!
-	*@brief	遅延描画関数。
-	@details
-	* ポストエフェクトの後で実行されます。HUDなどポストエフェクトの影響を受けたくない描画物はここでレンダリングしてください。
+	*@brief	描画関数。
 	*@param[in]		renderContext		レンダリングコンテキスト。
 	*/
-	void PostRender(CRenderContext& renderContext) override;
+	void Render(CRenderContext& renderContext) override;
 
 private:
-	/*!
-	*@brief	画面遷移関数。
-	*/
-	void SceneChange();
+	CSkinModel					m_SkinModel;
+	CSkinModelDataHandle		m_SkinModelData;
+	CMeshCollider				m_meshCollider;		//メッシュコライダー。
+	CRigidBody					m_rigidBody;		//剛体。
+
+	CLight						m_Light;
+
+	CVector3					m_position;
+	CQuaternion					m_rotation;
+	CVector3					m_scale;
 };
 
