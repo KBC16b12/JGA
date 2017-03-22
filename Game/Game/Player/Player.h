@@ -18,6 +18,7 @@ public:
 	*@return	trueが帰ってきたら初期化完了。
 	*/
 	bool Start() override;
+
 	/*!
 	*@brief	更新関数。
 	*/
@@ -36,6 +37,11 @@ public:
 	void Move();
 
 private:
+	/*!
+	*@brief	HPバー更新関数。
+	*/
+	void UpdateHPBar();
+
 	Bar*			m_bar;
 	int				m_hp;
 	int				m_maxhp;

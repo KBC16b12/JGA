@@ -18,6 +18,8 @@
 #include "tkEngine/resource/tkSkinModelDataHandle.h"
 #include "tkEngine/graphics/tkSkinModelMaterial.h"
 #include "tkEngine/Physics/tkPhysics.h"
+#include "tkEngine/physics/tkRigidBody.h"
+#include "tkEngine/Physics/tkMeshCollider.h"
 using namespace tkEngine;
 #include "tkEngine/random/tkRandom.h"
 
@@ -29,5 +31,7 @@ extern CLight g_defaultLight;	//デフォルトライト。
 using namespace Status;
 
 extern CRandom g_random;
+
+extern CLight g_defaultLight;	//デフォルトライト。
 
 #endif // _STDAFX_H_

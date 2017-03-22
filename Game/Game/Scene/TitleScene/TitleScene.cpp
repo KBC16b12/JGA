@@ -13,6 +13,7 @@ TitleScene::TitleScene()
 
 TitleScene::~TitleScene()
 {
+	m_bgm->Stop();
 	DeleteGO(m_bgm);
 }
 

@@ -5,20 +5,27 @@
 #include "../ResultScene/ResultScene.h"
 #include "Bar/Bar.h"
 #include "Player/Player.h"
+#include "../../Map/Map.h"
 
-GameScene* g_gameScene = NULL;
+GameScene* g_gameScene = nullptr;
 
 GameScene::GameScene()
 {
-	m_SampleTex = TextureResources().LoadEx("Assets/sprite/Game.png");
-	m_Sample.Init(m_SampleTex);
-	m_Sample.SetSize({ (float)Engine().GetScreenWidth(),(float)Engine().GetScreenHeight() });
+	m_map = NewGO<Map>(0);
+}
+
+void GameScene::Init(std::vector<SMapInfo> map_data)
+{
+	m_map->Init(map_data);
 }
 
 GameScene::~GameScene()
 {
+	m_bgm->Stop();
 	DeleteGO(m_bgm);
 	DeleteGO(m_player);
+	DeleteGO(m_map);
+	g_gameScene = nullptr;
 }
 
 bool GameScene::Start()
@@ -29,6 +36,7 @@ bool GameScene::Start()
 	m_bgm->Init("Assets/sound/GameBGM.wav");
 	m_bgm->Play(true);
 
+<<<<<<< HEAD
 	//カメラを初期化。
 	m_camera.SetPosition({ 0.0f, 0.0f, 100.0f });
 	m_camera.SetTarget({0.0f, 0.0f, 0.0f});
@@ -36,6 +44,8 @@ bool GameScene::Start()
 	//m_camera.SetFar(1000.0f);
 	m_camera.Update();
 
+=======
+>>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
 	//ライトを初期化。
 	m_light.SetAmbinetLight(CVector3::One);
 
@@ -59,7 +69,10 @@ void GameScene::Render(CRenderContext& renderContext)
 */
 void GameScene::PostRender(CRenderContext& renderContext)
 {
+<<<<<<< HEAD
 	//m_Sample.Draw(renderContext);
+=======
+>>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
 }
 
 /*!
@@ -77,13 +90,14 @@ void GameScene::SceneChange()
 		}
 		break;
 	case enRun:
+		SetActiveFlags(true);
 		if (Pad(0).IsTrigger(enButtonStart))
 		{
 			m_scenedata = enMenu;
 
 			m_runstat = enFadeOut;
 
-			g_Fade->StartFadeOut();
+			SetActiveFlags(false);
 			return;
 		}
 		if (Pad(0).IsTrigger(enButtonA))
@@ -109,12 +123,31 @@ void GameScene::SceneChange()
 			default:
 				break;
 			}
-			//自分を削除。
-			DeleteGO(this);
+			m_runstat = enRun;
+			g_gameScene->SetActiveFlag(false);
+			if (m_scenedata != enMenu)
+			{
+				//自分を削除。
+				DeleteGO(this);
+			}
 			return;
 		}
 		break;
 	default:
 		break;
 	}
+}
+
+void GameScene::SetActiveFlags(bool flag)
+{
+	m_player->SetActiveFlag(flag);
+	if (flag)
+	{
+		m_bgm->Play(true);
+	}
+	else
+	{
+		m_bgm->Stop();
+	}
+	m_map->SetActiveFlag(flag);
 }

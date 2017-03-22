@@ -40,11 +40,20 @@ bool Player::Start()
 
 void Player::Update()
 {
+	UpdateHPBar();
+}
+
+void Player::Render(CRenderContext& renderContext)
+{
+
+}
+
+void Player::UpdateHPBar()
+{
 	if (0 < m_hp)
 	{
 		m_hp--;
 	}
-
 	if (50.0f < (float)m_hp / (float)m_maxhp * 100.0f)
 	{
 		m_bar->SetBarPath("Assets/sprite/Green.png");
@@ -58,6 +67,7 @@ void Player::Update()
 		m_bar->SetBarPath("Assets/sprite/Red.png");
 	}
 	m_bar->SetData(m_hp, m_maxhp);
+<<<<<<< HEAD
 
 	Move();
 
@@ -138,4 +148,6 @@ void Player::Move()
 void Player::Render(CRenderContext& renderContext)
 {
 	skinModel.Draw(renderContext,m_camera->GetViewMatrix(),m_camera->GetProjectionMatrix());
+=======
+>>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
 }

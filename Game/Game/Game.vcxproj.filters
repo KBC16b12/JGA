@@ -49,7 +49,11 @@
       <UniqueIdentifier>{fe5e7bad-c962-4baf-b854-d06d103e9aa6}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files\GameCamera">
+<<<<<<< HEAD
       <UniqueIdentifier>{e839e633-250d-4fc1-8614-5fe095bc5da2}</UniqueIdentifier>
+=======
+      <UniqueIdentifier>{3f196125-2a0d-46e1-84b6-bc737ee1d69a}</UniqueIdentifier>
+>>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -64,12 +68,6 @@
     </ClCompile>
     <ClCompile Include="Player\Player.cpp">
       <Filter>Source Files\Player</Filter>
-    </ClCompile>
-    <ClCompile Include="Map\Map.cpp">
-      <Filter>Source Files\Map</Filter>
-    </ClCompile>
-    <ClCompile Include="Map\MapChip.cpp">
-      <Filter>Source Files\Map</Filter>
     </ClCompile>
     <ClCompile Include="Scene\Fade\Fade.cpp">
       <Filter>Source Files\Scene\Fade</Filter>
@@ -98,7 +96,17 @@
     <ClCompile Include="Scene\SoloScene\SoloScene.cpp">
       <Filter>Source Files\Scene\Solo</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="GameCamera.cpp">
+=======
+    <ClCompile Include="Map\Map.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Map\MapChip.cpp">
+      <Filter>Source Files\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera\GameCamera.cpp">
+>>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
       <Filter>Source Files\GameCamera</Filter>
     </ClCompile>
   </ItemGroup>
@@ -111,12 +119,6 @@
     </ClInclude>
     <ClInclude Include="Player\Player.h">
       <Filter>Source Files\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Map\Map.h">
-      <Filter>Source Files\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="Map\MapChip.h">
-      <Filter>Source Files\Map</Filter>
     </ClInclude>
     <ClInclude Include="stuNamespace.h">
       <Filter>Source Files</Filter>
@@ -148,7 +150,17 @@
     <ClInclude Include="Scene\WaitScene\WaitScene.h">
       <Filter>Source Files\Scene\Wait</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="GameCamera.h">
+=======
+    <ClInclude Include="Map\Map.h">
+      <Filter>Source Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Map\MapChip.h">
+      <Filter>Source Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\GameCamera.h">
+>>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
       <Filter>Source Files\GameCamera</Filter>
     </ClInclude>
   </ItemGroup>

@@ -164,7 +164,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Bar\Bar.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="GameCamera.cpp" />
+=======
+    <ClCompile Include="Camera\GameCamera.cpp" />
+>>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Map\Map.cpp" />
     <ClCompile Include="Map\MapChip.cpp" />
@@ -187,7 +191,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bar\Bar.h" />
+<<<<<<< HEAD
     <ClInclude Include="GameCamera.h" />
+=======
+    <ClInclude Include="Camera\GameCamera.h" />
+>>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
     <ClInclude Include="Map\Map.h" />
     <ClInclude Include="Map\MapChip.h" />
     <ClInclude Include="Player\Player.h" />
