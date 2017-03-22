@@ -26,6 +26,10 @@ namespace tkEngine{
 		 */
 		void Init(float radius, float height, const CVector3& position);
 		/*!
+		* @brief	実行。
+		*/
+		void Execute();
+		/*!
 		 * @brief	実行。
 		 */
 		void Execute(float deltaTime);

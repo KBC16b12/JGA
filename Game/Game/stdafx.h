@@ -21,6 +21,8 @@
 using namespace tkEngine;
 #include "tkEngine/random/tkRandom.h"
 
+extern CLight g_defaultLight;	//デフォルトライト。
+
 #include "tkEngine/Sound/tkSoundSource.h"
 
 #include "stuNamespace.h"

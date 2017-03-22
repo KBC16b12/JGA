@@ -1,8 +1,11 @@
 #include "stdafx.h"
 #include "Scene/TitleScene/TitleScene.h"
 #include "Scene/Fade/Fade.h"
+#include "Player/Player.h"
 
 CRandom g_random;
+
+CLight g_defaultLight;	//デフォルトライト。
 /*!
  * @brief	tkEngineの初期化。
  */

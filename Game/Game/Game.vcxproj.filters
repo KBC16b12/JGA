@@ -48,6 +48,9 @@
     <Filter Include="Source Files\Scene\Wait">
       <UniqueIdentifier>{fe5e7bad-c962-4baf-b854-d06d103e9aa6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameCamera">
+      <UniqueIdentifier>{e839e633-250d-4fc1-8614-5fe095bc5da2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -95,6 +98,9 @@
     <ClCompile Include="Scene\SoloScene\SoloScene.cpp">
       <Filter>Source Files\Scene\Solo</Filter>
     </ClCompile>
+    <ClCompile Include="GameCamera.cpp">
+      <Filter>Source Files\GameCamera</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -141,6 +147,9 @@
     </ClInclude>
     <ClInclude Include="Scene\WaitScene\WaitScene.h">
       <Filter>Source Files\Scene\Wait</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCamera.h">
+      <Filter>Source Files\GameCamera</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

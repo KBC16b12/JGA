@@ -24,15 +24,16 @@ GameScene::~GameScene()
 bool GameScene::Start()
 {
 	m_player = NewGO<Player>(0);
-
+	m_player->SetCamera(&m_camera);
 	m_bgm = NewGO<CSoundSource>(0);
 	m_bgm->Init("Assets/sound/GameBGM.wav");
 	m_bgm->Play(true);
 
 	//カメラを初期化。
-	m_camera.SetPosition({ 0.0f, 0.0f, -700.0f });
-	m_camera.SetNear(400.0f);
-	m_camera.SetFar(1000.0f);
+	m_camera.SetPosition({ 0.0f, 0.0f, 100.0f });
+	m_camera.SetTarget({0.0f, 0.0f, 0.0f});
+	//m_camera.SetNear(400.0f);
+	//m_camera.SetFar(1000.0f);
 	m_camera.Update();
 
 	//ライトを初期化。
@@ -58,7 +59,7 @@ void GameScene::Render(CRenderContext& renderContext)
 */
 void GameScene::PostRender(CRenderContext& renderContext)
 {
-	m_Sample.Draw(renderContext);
+	//m_Sample.Draw(renderContext);
 }
 
 /*!
