@@ -1,6 +1,7 @@
 #pragma once
 
 class Player;
+class Map;
 
 /*!
  *@brief	ゲームシーン。
@@ -17,6 +18,11 @@ public:
 	 *@brief	デストラクタ。
 	 */
 	~GameScene();
+
+	/*!
+	*@brief 初期化関数
+	*/
+	void Init(std::vector<SMapInfo> map_data);
 
 	/*!
 	 *@brief	開始関数。
@@ -46,6 +52,8 @@ public:
 	*/
 	void PostRender(CRenderContext& renderContext) override;
 
+	void SetActiveFlags(bool flag);
+
 private:
 	/*!
 	*@brief	画面遷移関数。
@@ -53,17 +61,11 @@ private:
 	void SceneChange();
 
 	CSoundSource*				m_bgm;							//!<BGMソース。
+	Player*						m_player;
+	Map*						m_map;
 
-	CTexture*					m_SampleTex;						//!<サンプルのテクスチャ。
-	CSprite						m_Sample;							//!<サンプルのスプライト。
-
-	CTexture*					m_texture;
-	CSprite						m_sprite;
-
-	CCamera						m_camera;								//!<カメラ。
 	CLight						m_light;								//!<ライト。
 
-	Player*						m_player;
 
 	RunStat						m_runstat = enFadeIn;
 

@@ -48,6 +48,9 @@
     <Filter Include="Source Files\Scene\Wait">
       <UniqueIdentifier>{fe5e7bad-c962-4baf-b854-d06d103e9aa6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameCamera">
+      <UniqueIdentifier>{3f196125-2a0d-46e1-84b6-bc737ee1d69a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -95,6 +98,9 @@
     <ClCompile Include="Map\MapChip.cpp">
       <Filter>Source Files\Map</Filter>
     </ClCompile>
+    <ClCompile Include="Camera\GameCamera.cpp">
+      <Filter>Source Files\GameCamera</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -141,6 +147,9 @@
     </ClInclude>
     <ClInclude Include="Map\MapChip.h">
       <Filter>Source Files\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera\GameCamera.h">
+      <Filter>Source Files\GameCamera</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
