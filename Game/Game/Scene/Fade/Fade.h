@@ -6,8 +6,16 @@
 
 class Fade : public IGameObject{
 public:
+	/*!
+	*@brief	コンストラクタ。
+	*/
 	Fade();
+
+	/*!
+	*@brief	デストラクタ。
+	*/
 	~Fade();
+
 	/*!
 	 *@brief	開始関数。
 	 *@details

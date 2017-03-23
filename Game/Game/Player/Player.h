@@ -6,7 +6,14 @@ class Bar;
 class Player : public IGameObject
 {
 public:
+	/*!
+	*@brief	コンストラクタ。
+	*/
 	Player();
+
+	/*!
+	*@brief	デストラクタ。
+	*/
 	~Player();
 
 	/*!
@@ -38,10 +45,6 @@ private:
 	*/
 	void UpdateHPBar();
 
-	Bar*			m_bar;
-	int				m_hp;
-	int				m_maxhp;
-
 	CSkinModel				skinModel;					//スキンモデル
 	CSkinModelData			skinModelData;				//スキンモデルデータ
 	CQuaternion				rotation;					//回転
@@ -51,5 +54,8 @@ private:
 
 	int						currentAnimationNo;
 	float					angle = 180;
+	Bar*			m_HPbar;		//HPバー
+	int				m_hp;			//HP
+	int				m_maxhp;		//最大HP
 };
 

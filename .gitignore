@@ -14,4 +14,5 @@
 /tkEngine/bulletPhysics/src/BulletCollision/x64
 /tkEngine/bulletPhysics/src/BulletSoftBody/x64
 /tkEngine/bulletPhysics/src/LinearMath/x64
+/Game/x64
 /Game/.vs
