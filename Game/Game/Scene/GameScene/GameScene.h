@@ -57,8 +57,9 @@ private:
 	CTexture*					m_SampleTex;						//!<サンプルのテクスチャ。
 	CSprite						m_Sample;							//!<サンプルのスプライト。
 
-	CTexture*					m_texture;
-	CSprite						m_sprite;
+	CTexture*					m_texture[10];
+	CSprite						m_timesprite[3];
+	CSprite						m_killsprite[2];
 
 	CCamera						m_camera;								//!<カメラ。
 	CLight						m_light;								//!<ライト。
@@ -68,6 +69,9 @@ private:
 	RunStat						m_runstat = enFadeIn;
 
 	SceneData					m_scenedata;
+
+	int m_time;				//タイマー
+	int m_killcount;		//キル数
 };
 
 extern GameScene* g_gameScene;
