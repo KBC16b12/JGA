@@ -1,17 +1,12 @@
 #include "stdafx.h"
 #include "Scene/TitleScene/TitleScene.h"
 #include "Scene/Fade/Fade.h"
-<<<<<<< HEAD
 #include "Player/Player.h"
-=======
 #include "Camera/GameCamera.h"
 
 CLight	g_defaultLight;	//デフォルトライト。
->>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
 
 CRandom g_random;
-
-CLight g_defaultLight;	//デフォルトライト。
 /*!
  * @brief	tkEngineの初期化。
  */

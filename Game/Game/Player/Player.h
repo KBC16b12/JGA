@@ -29,10 +29,6 @@ public:
 	*/
 	void Render(CRenderContext& renderContext);
 
-	void SetCamera(CCamera* camera)
-	{
-		m_camera = camera;
-	}
 
 	void Move();
 
@@ -51,11 +47,9 @@ private:
 	CQuaternion				rotation;					//回転
 	CAnimation				Animation;					//アニメーション
 	CCharacterController	characterController;		//キャラクタ―コントローラー。
-	CVector3				position = { 0.0f, -20.0f, 0.0f };
-	CCamera*				m_camera;
+	CVector3				position = { 0.0f, 40.0f, 0.0f };
 
 	int						currentAnimationNo;
 	float					angle = 180;
-	bool					Isjump;
 };
 

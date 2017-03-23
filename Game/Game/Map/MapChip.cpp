@@ -31,6 +31,8 @@ void MapChip::Init(SMapInfo map_dat)
 
 	m_SkinModel.Update(m_position, m_rotation, m_scale);
 
+	m_meshCollider.CreateFromSkinModel(&m_SkinModel, m_SkinModelData.GetBody()->GetRootBoneWorldMatrix());
+
 	RigidBodyInfo rbInfo;
 	//剛体のコライダーを渡す。
 	rbInfo.collider = &m_meshCollider;

@@ -6,6 +6,7 @@
 #include "Bar/Bar.h"
 #include "Player/Player.h"
 #include "../../Map/Map.h"
+#include "../../Camera/GameCamera.h"
 
 GameScene* g_gameScene = nullptr;
 
@@ -31,21 +32,10 @@ GameScene::~GameScene()
 bool GameScene::Start()
 {
 	m_player = NewGO<Player>(0);
-	m_player->SetCamera(&m_camera);
 	m_bgm = NewGO<CSoundSource>(0);
 	m_bgm->Init("Assets/sound/GameBGM.wav");
 	m_bgm->Play(true);
 
-<<<<<<< HEAD
-	//カメラを初期化。
-	m_camera.SetPosition({ 0.0f, 0.0f, 100.0f });
-	m_camera.SetTarget({0.0f, 0.0f, 0.0f});
-	//m_camera.SetNear(400.0f);
-	//m_camera.SetFar(1000.0f);
-	m_camera.Update();
-
-=======
->>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
 	//ライトを初期化。
 	m_light.SetAmbinetLight(CVector3::One);
 
@@ -69,10 +59,7 @@ void GameScene::Render(CRenderContext& renderContext)
 */
 void GameScene::PostRender(CRenderContext& renderContext)
 {
-<<<<<<< HEAD
 	//m_Sample.Draw(renderContext);
-=======
->>>>>>> afc8cac76a618cf01dd26e023000351c5dcef3ab
 }
 
 /*!
