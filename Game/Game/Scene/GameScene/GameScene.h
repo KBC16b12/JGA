@@ -60,16 +60,16 @@ private:
 	*/
 	void SceneChange();
 
-	CSoundSource*				m_bgm;							//!<BGMソース。
-	Player*						m_player;
-	Map*						m_map;
+	CSoundSource*				m_bgm;							//BGMソース。
+	Player*						m_player;						//プレイヤ
+	Map*						m_map;							//マップ
 
-	CLight						m_light;								//!<ライト。
+	CLight						m_light;						//ライト。
 
 
-	RunStat						m_runstat = enFadeIn;
+	RunStat						m_runstat = enFadeIn;			//フェードステータス
 
-	SceneData					m_scenedata;
+	SceneData					m_scenedata;					//画面遷移データ
 };
 
 extern GameScene* g_gameScene;

@@ -21,6 +21,7 @@ void GameScene::Init(std::vector<SMapInfo> map_data)
 
 GameScene::~GameScene()
 {
+	//BGM停止
 	m_bgm->Stop();
 	DeleteGO(m_bgm);
 	DeleteGO(m_player);
@@ -69,6 +70,7 @@ void GameScene::SceneChange()
 	switch (m_runstat)
 	{
 	case enFadeIn:
+		//フェードイン
 		if (!g_Fade->IsExecute())
 		{
 			g_Fade->StartFadeIn();
@@ -76,9 +78,12 @@ void GameScene::SceneChange()
 		}
 		break;
 	case enRun:
+		//動作中
 		SetActiveFlags(true);
+		//スタートボタン押下
 		if (Pad(0).IsTrigger(enButtonStart))
 		{
+			//メニューへ遷移
 			m_scenedata = enMenu;
 
 			m_runstat = enFadeOut;
@@ -88,6 +93,7 @@ void GameScene::SceneChange()
 		}
 		if (Pad(0).IsTrigger(enButtonA))
 		{
+			//リザルトへ遷移
 			m_scenedata = enResult;
 
 			m_runstat = enFadeOut;
@@ -99,6 +105,7 @@ void GameScene::SceneChange()
 	case enFadeOut:
 		if (!g_Fade->IsExecute())
 		{
+			//画面生成
 			switch (m_scenedata)
 			{
 			case enMenu:
@@ -111,6 +118,8 @@ void GameScene::SceneChange()
 			}
 			m_runstat = enRun;
 			g_gameScene->SetActiveFlag(false);
+			
+			//メニュー画面への遷移でない
 			if (m_scenedata != enMenu)
 			{
 				//自分を削除。
@@ -126,6 +135,7 @@ void GameScene::SceneChange()
 
 void GameScene::SetActiveFlags(bool flag)
 {
+	//ここで生成したオブジェクトの動作変更
 	m_player->SetActiveFlag(flag);
 	if (flag)
 	{

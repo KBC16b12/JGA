@@ -5,6 +5,7 @@ GameCamera* g_gameCamera;
 
 GameCamera::GameCamera()
 {
+	//ƒJƒƒ‰‚Ì‰Šú‰»
 	m_position = CVector3::Zero;
 	m_position.z -= 50.0f;
 	m_look_position = CVector3::Zero;

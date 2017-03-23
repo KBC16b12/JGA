@@ -46,6 +46,6 @@ public:
 
 private:
 
-	std::vector<MapChip*>		m_mapchip;
+	std::vector<MapChip*>		m_mapchip;			//マップチップリスト
 };
 

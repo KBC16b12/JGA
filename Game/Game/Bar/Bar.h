@@ -30,7 +30,14 @@ public:
 		CVector2 pivot;
 	};
 
+	/*!
+	*@brief	コンストラクタ。
+	*/
 	Bar();
+
+	/*!
+	*@brief	デストラクタ。
+	*/
 	~Bar();
 
 	/*!
@@ -148,7 +155,7 @@ private:
 	void Bar_Pivot();
 
 	/*!
-	*@brief ピボットを設定。
+	*@brief 座標を設定。
 	*/
 	void Bar_Pos();
 
@@ -170,9 +177,9 @@ private:
 	CSprite				m_Bar;			//バー。
 	CTexture*			m_BarTex;		//バーのテクスチャ。
 	char*				m_BarPath;		//バーのファイルパス。
-	CVector2			m_BarPos;
+	CVector2			m_BarPos;		//バーの座標
 	
-	CVector2			m_BarMaxSize;
+	CVector2			m_BarMaxSize;	//バーの最大座標
 		
 	CSprite				m_Gauge;		//ゲージ。
 	CTexture*			m_GaugeTex;		//ゲージのテクスチャ。
@@ -188,9 +195,9 @@ private:
 
 	float				m_timer;		//タイマー。
 
-	EnState				m_state;
+	EnState				m_state;		//ダメージ演出ステータス
 
-	enBarQuarter		m_Quarter;
+	enBarQuarter		m_Quarter;		//どちらに減っていくか
 };
 
 
