@@ -5,7 +5,14 @@ class Bar;
 class Player : public IGameObject
 {
 public:
+	/*!
+	*@brief	コンストラクタ。
+	*/
 	Player();
+
+	/*!
+	*@brief	デストラクタ。
+	*/
 	~Player();
 
 	/*!
@@ -33,8 +40,8 @@ private:
 	*/
 	void UpdateHPBar();
 
-	Bar*			m_bar;
-	int				m_hp;
-	int				m_maxhp;
+	Bar*			m_HPbar;		//HPバー
+	int				m_hp;			//HP
+	int				m_maxhp;		//最大HP
 };
 

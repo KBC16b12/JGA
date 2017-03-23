@@ -42,15 +42,15 @@ public:
 	void Render(CRenderContext& renderContext) override;
 
 private:
-	CSkinModel					m_SkinModel;
-	CSkinModelDataHandle		m_SkinModelData;
+	CSkinModel					m_SkinModel;		//スキンモデル
+	CSkinModelDataHandle		m_SkinModelData;	//スキンモデルのハンドル
 	CMeshCollider				m_meshCollider;		//メッシュコライダー。
 	CRigidBody					m_rigidBody;		//剛体。
 
-	CLight						m_Light;
+	CLight						m_Light;			//ライト
 
-	CVector3					m_position;
-	CQuaternion					m_rotation;
-	CVector3					m_scale;
+	CVector3					m_position;			//座標
+	CQuaternion					m_rotation;			//回転
+	CVector3					m_scale;			//拡大
 };
 

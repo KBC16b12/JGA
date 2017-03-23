@@ -11,6 +11,7 @@ Fade::~Fade()
 }
 bool Fade::Start()
 {
+	//フェードのテクスチャ設定
 	m_texture.Load("Assets/sprite/Fade.png");
 	m_sprite.Init(&m_texture);
 	m_sprite.SetSize({ 
@@ -24,6 +25,7 @@ void Fade::Update()
 	if (m_isExecute) {
 		switch (m_state) {
 		case eFadeOut: {
+			//タイマーカウント
 			m_timer += GameTime().GetFrameDeltaTime();
 			if (m_timer < FADE_TIME) {
 				float t = m_timer / FADE_TIME;

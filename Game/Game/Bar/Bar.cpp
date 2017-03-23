@@ -25,6 +25,7 @@ Bar::Bar()
 	m_BarBack.Init(m_BarBackTex);
 	m_BarBack.SetPivot({ 0.0f, 0.5f });
 
+
 	m_data = 0;
 	m_old_data = 0;
 	m_max_data = 0;
@@ -49,6 +50,7 @@ void Bar::Update()
 
 void Bar::Bar_Update()
 {
+	//最大データが0以下で早期リターン
 	if (m_max_data <= 0)
 	{
 		return;
@@ -91,6 +93,7 @@ void Bar::Bar_Update()
 
 void Bar::Bar_Pivot()
 {
+	//ピボット設定
 	CVector2 pivot = CVector2::Zero;
 	switch (m_Quarter)
 	{
@@ -117,7 +120,7 @@ void Bar::Bar_Pos()
 {
 	CVector2 pos = m_BarPos;
 
-	//消えていく方向をもとにピボット決定
+	//消えていく方向をもとに座標決定
 	switch (m_Quarter)
 	{
 	case Bar::enQuaUp:
@@ -163,6 +166,7 @@ void Bar::Bar_Wait()
 
 void Bar::Bar_Damage()
 {
+	//ダメージ処理
 	CVector2 sizeBack = m_BarBack.GetSize();
 
 	switch (m_Quarter)

@@ -48,11 +48,11 @@ private:
 
 	CSoundSource* m_bgm = NULL;
 
-	CTexture*					m_SampleTex;						//!<サンプルのテクスチャ。
-	CSprite						m_Sample;							//!<サンプルのスプライト。
+	CTexture*					m_SampleTex;					//!<サンプルのテクスチャ。
+	CSprite						m_Sample;						//!<サンプルのスプライト。
 
-	RunStat						m_runstat = enFadeIn;
+	RunStat						m_runstat = enFadeIn;			//フェードステータス
 
-	SceneData					m_scenedata;
+	SceneData					m_scenedata;					//画面遷移データ
 };
 
