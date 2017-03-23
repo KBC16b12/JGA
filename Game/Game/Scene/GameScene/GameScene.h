@@ -64,12 +64,20 @@ private:
 	Player*						m_player;
 	Map*						m_map;
 
-	CLight						m_light;								//!<ライト。
+	CTexture*					m_texture[10];
+	CSprite						m_timesprite[3];
+	CSprite						m_killsprite[2];
 
+	CCamera						m_camera;								//!<カメラ。
+
+	CLight						m_light;								//!<ライト。
 
 	RunStat						m_runstat = enFadeIn;
 
 	SceneData					m_scenedata;
+
+	int m_time;				//タイマー
+	int m_killcount;		//キル数
 };
 
 extern GameScene* g_gameScene;
