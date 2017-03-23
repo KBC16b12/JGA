@@ -4,6 +4,14 @@
 #include "../JoinScene/JoinScene.h"
 #include "../WaitScene/WaitScene.h"
 
+namespace
+{
+	std::vector<SMapInfo> n_multi_map_dat =
+	{
+#include "../../Map/MapData/Sample.h"
+	};
+}
+
 WaitScene::WaitScene()
 {
 	m_SampleTex = TextureResources().LoadEx("Assets/sprite/Wait.png");
@@ -68,6 +76,7 @@ void WaitScene::SceneChange()
 			{
 			case enGame:
 				g_gameScene = NewGO<GameScene>(0);
+				g_gameScene->Init(n_multi_map_dat);
 				break;
 			case enJoin:
 				NewGO<JoinScene>(0);

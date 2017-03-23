@@ -104,7 +104,7 @@ void Bar::Bar_Pivot()
 		pivot = { 0.0f,0.5f };
 		break;
 	case Bar::enQuaRight:
-		pivot = { 1.0f,0.0f };
+		pivot = { 1.0f,0.5f };
 		break;
 	default:
 		break;
